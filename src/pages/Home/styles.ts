@@ -28,15 +28,13 @@ export const FormContainer = styled.div`
 const BaseInpunt = styled.input`
   background: transparent;
   border: 0;
-`;
-export const TaskInput = styled(BaseInpunt)`
   height: 2.5rem;
   border-bottom: 2px solid ${(props) => props.theme["gray-500"]};
   font-weight: bold;
   font-size: 1.125rem;
   padding: 0 0.5rem;
   color: ${(props) => props.theme["gray-100"]};
-  flex: 1;
+  
 
   &::placeholder {
     color: ${(props) => props.theme["gray-500"]};
@@ -45,6 +43,12 @@ export const TaskInput = styled(BaseInpunt)`
   &:focus {
     box-shadow: none;
     border-color: ${(props) => props.theme["green-500"]};
+  }
+`;
+export const TaskInput = styled(BaseInpunt)`
+  flex: 1;
+  &::-webkit-calendar-picker-indicator {
+    display: none !important;
   }
 `;
 export const MinutesAmountInput = styled(BaseInpunt)`
